@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="payrollCalcWrapper">
+        <div class="payrollCalc">
+            <h1>Ciphr outsourced payroll calculator</h1>
+
+            <div class="payrollRow">
+                <p>How many people do you have processing your payroll internally (FTEs)</p>
+                <input class="payrollInput" type="text" name="processors" id="processors" value="0" onkeyup="calculate()">
+            </div>
+
+            <div class="payrollRow">
+                <p>What is the average FTE salary of the people processing your payroll</p>
+                <input class="payrollInput" type="text" name="averagefte" id="averagefte" value="30000" onkeyup="calculate()">
+            </div>
+
+            <div class="payrollRow">
+                <p>Average cost of benefits per employee per year?</p>
+                <input class="payrollInput" type="text" name="benefits" id="benefits" value="5000" onkeyup="calculate()">
+            </div>
+
+            <div class="payrollRow">
+                <p style="font-weight: bold;">Total annual cost of employees processing payroll internally:</p>
+                <div class="resulWrapper">
+                    <span id="resultValue">£0</span>
+                </div>
+
+            </div>
+
+            <div class="payrollRow">
+                <p>How many people do you have processing your payroll internally (FTEs)</p>
+                <div class="custom-select">
+                    <select name="empcount" id="empcount">
+                        <option value="0">Choose...</option>
+                        <option value="100">100</option>
+                        <option value="125">125</option>
+                        <option value="150">150</option>
+                        <option value="200">200</option>
+                        <option value="250">250</option>
+                        <option value="300">300</option>
+                        <option value="350">350</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                        <option value="750">750</option>
+                        <option value="1000">1000</option>
+                        <option value="1500">1500</option>
+                        <option value="2000">2000</option>
+                        <option value="2500">2500</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
