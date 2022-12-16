@@ -75,59 +75,59 @@ document.addEventListener("click", closeAllSelect);
 var data = {
     "100": {
         ARR: 6000,
-        Implement: 5
+        Implement: 4875
     },
     "125": {
         ARR: 7500,
-        Implement: 5
+        Implement: 4875
     },
     "150": {
         ARR: 9000,
-        Implement: 6
+        Implement: 5850
     },
     "200": {
         ARR: 11500,
-        Implement: 6
+        Implement: 5850
     },
     "250": {
         ARR: 14250,
-        Implement: 7
+        Implement: 6825
     },
     "300": {
         ARR: 17000,
-        Implement: 7
+        Implement: 6825
     },
     "350": {
         ARR: 19750,
-        Implement: 8
+        Implement: 7800
     },
     "400": {
         ARR: 22500,
-        Implement: 8
+        Implement: 7800
     },
     "500": {
         ARR: 28000,
-        Implement: 8
+        Implement: 7800
     },
     "750": {
         ARR: 42000,
-        Implement: 12
+        Implement: 11700
     },
     "1000": {
         ARR: 42000,
-        Implement: 14
+        Implement: 13650
     },
     "1500": {
         ARR: 65000,
-        Implement: 16
+        Implement: 15600
     },
     "2000": {
         ARR: 80000,
-        Implement: 20
+        Implement: 19500
     },
     "2500": {
         ARR: 90000,
-        Implement: 30
+        Implement: 29250
     },
 }
 
