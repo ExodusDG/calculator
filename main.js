@@ -72,6 +72,65 @@ function closeAllSelect(elmnt) {
 
 document.addEventListener("click", closeAllSelect);
 
+var data = {
+    "100": {
+        ARR: 6000,
+        Implement: 5
+    },
+    "125": {
+        ARR: 7500,
+        Implement: 5
+    },
+    "150": {
+        ARR: 9000,
+        Implement: 6
+    },
+    "200": {
+        ARR: 11500,
+        Implement: 6
+    },
+    "250": {
+        ARR: 14250,
+        Implement: 7
+    },
+    "300": {
+        ARR: 17000,
+        Implement: 7
+    },
+    "350": {
+        ARR: 19750,
+        Implement: 8
+    },
+    "400": {
+        ARR: 22500,
+        Implement: 8
+    },
+    "500": {
+        ARR: 28000,
+        Implement: 8
+    },
+    "750": {
+        ARR: 42000,
+        Implement: 12
+    },
+    "1000": {
+        ARR: 42000,
+        Implement: 14
+    },
+    "1500": {
+        ARR: 65000,
+        Implement: 16
+    },
+    "2000": {
+        ARR: 80000,
+        Implement: 20
+    },
+    "2500": {
+        ARR: 90000,
+        Implement: 30
+    },
+}
+
 
 //CALC LOGIC
 
@@ -79,8 +138,14 @@ $('.select-items div').click(function() {
     calculate()
 })
 
+$('#empcount opton').click(function() {
+    calculate()
+})
+
+var processors = Number($('#processors').val());
+
 function calculate() {
-    let processors = Number($('#processors').val());
+    processors = Number($('#processors').val());
     let averagefte = Number($('#averagefte').val()) / 1000;
     let benefits = Number($('#benefits').val() / 1000)
     let empcount = Number($('.same-as-selected').text())
@@ -89,8 +154,28 @@ function calculate() {
 
     $('#resultValue').text('£' + resultValue + ',000')
 
-    console.log(processors)
-    console.log(averagefte)
-    console.log(benefits)
-    console.log(empcount)
+
+
+
+    if ($('.select-selected').text() != 'Choose...') {
+        if (processors != 0) {
+            var FTE = $('.select-selected').text();
+
+            var ARR = Number(data[FTE].ARR)
+            var Implement = Number(data[FTE].Implement)
+
+
+            resultValue = resultValue * 1000;
+
+            var year1 = resultValue - (ARR + Implement);
+            var year2 = resultValue - ARR;
+            var year3 = resultValue - ARR;
+
+            $('.year1 span').text(year1)
+            $('.year2 span').text(year2)
+            $('.year3 span').text(year3)
+        }
+
+    }
+
 }
